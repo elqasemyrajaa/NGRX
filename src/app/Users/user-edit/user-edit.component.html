@@ -1,0 +1,28 @@
+
+
+  <form   class="form-inline mb-4">
+    <form [formGroup]="customerForm" (submit)="updateUser()" class="form-inline mb-4 container">
+      <label class="sr-only" for="id">ID</label>
+      <div class="input-group mb-2 mr-sm-2">
+        <input type="text" class="form-control" formControlName="id" placeholder="ID">
+      </div>
+    <label class="sr-only" for="Name">First Name</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" formControlName="firstName" placeholder="First Name">
+    </div>
+
+    <label class="sr-only" for="Phone">Last Name</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" formControlName="lastName"  placeholder="Last Name">
+    </div>
+
+    <label class="sr-only" for="Address">email</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" formControlName="email"  placeholder="email">
+    </div>
+    <label class="sr-only" for="password">Password</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" formControlName="password"  placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Edit User</button>
+  </form>

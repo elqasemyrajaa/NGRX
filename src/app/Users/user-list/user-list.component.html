@@ -1,0 +1,29 @@
+
+<table class="table table-hover container">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">firstName</th>
+      <th scope="col">lastName</th>
+      <th scope="col">email</th>
+      <th scope="col">password</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="5" class="alert alert-danger"></td>
+    </tr>
+    <tr>
+     <tr *ngFor="let user of (this.users$ | async)">
+      <th scope="row">{{user.firstName}}</th>
+      <td>{{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.password}}</td>
+      <th> 
+       <a (click)=editUser(user)>edit</a>
+        <br>
+        <a (click)=deleteUser(user)>delete</a>
+       </th> 
+    </tr> 
+  </tbody>
+</table>
